@@ -24,7 +24,7 @@ The payload will be in this process:
 
 ![Process](https://github.com/victorTrofelli/Malicious-Service-With-Ntdll/assets/49568664/3ce4240e-9862-40e7-9b7c-c031ed2dbb31)
 
-You can see that PPid Spoofing and DllPolicyBlock techniques are there too
+You can also see that the PPid Spoofing and DllBlockPolicy techniques are present in the screenshot above.
 
 ## Ntdll Functions
 Functions from Ntdll.dll used in this project:
