@@ -18,7 +18,7 @@ Among the functions and techniques I used were:
 
 The chosen injection technique was APC (Asynchronous Procedure Call) injection, combined with the EarlyBird method, involving the creation of a target process for injection to occur on a specific thread. APC injection allows a thread to asynchronously execute a callback function on another thread within the same process.
 
-As an addition, since the malware is a service, it can be installed on Windows with elevated permissions. However, this can result in gaining access to the System user and automatic startup of the service with the operating system, ensuring persistence.
+As an addition, since the malware is a service, it can only be installed on Windows with elevated permissions. This will result in outcomes such as access to the System user and the automatic startup of the service with the operating system, providing persistence.
 
 The payload will be in this process:
 
@@ -49,7 +49,7 @@ You can compile the code using MSVC compiler as x64 Release
 
 After doing this, execute the following commands with elevated permissions:
 ```bash
-sc.exe create "Windows Update Scheduler" binpath= "Path\to\Windows Update Scheduler.exe start= auto"
+sc.exe create "Windows Update Scheduler" binpath= "Path\to\Windows Update Scheduler.exe" start= auto
 ```
 
 ```bash
